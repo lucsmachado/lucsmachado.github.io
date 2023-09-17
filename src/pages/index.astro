@@ -1,12 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Button from '../components/Button.tsx';
-import Main from '../components/Main.tsx';
 ---
 
 <Layout title="Lucas Machado">
-  <Main />
-  <Button>Click me</Button>
+  <header class="px-16 py-8">
+    <nav>
+      <ul class="flex gap-16">
+        <li>
+          <a href="https://github.com/lucsmachado/" target="_blank">
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/lucascarmac/" target="_blank">
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="p-16">
+    <section class="flex flex-col gap-8">
+    <img 
+      src="https://avatars.githubusercontent.com/u/73367620?v=4" 
+      alt="A picture of Lucas, a young man with glasses, a beard and a black t-shirt, smiling on a bright day outside" 
+      class="rounded-full aspect-square w-64"
+    />
+    <div class="flex flex-col gap-2">
+    <h1 class="text-5xl font-bold">Lucas Machado</h1>
+    <h2 class="text-xl font-semibold text-gray-200">Junior Front End Engineer at Onyma Digital</h2>
+    <p class="text-lg text-gray-400">I build accessible, responsive UIs for the web.</p>
+    </div>
+    </section>
+  </main>
 </Layout>
 
 <style>
