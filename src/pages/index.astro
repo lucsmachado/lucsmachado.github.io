@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import {Icon} from 'astro-icon';
 ---
 
 <Layout title="Lucas Machado">
@@ -7,13 +8,15 @@ import Layout from '../layouts/Layout.astro';
     <nav>
       <ul class="flex gap-16">
         <li>
-          <a href="https://github.com/lucsmachado/" target="_blank">
-            GitHub
+          <a href="https://github.com/lucsmachado/" target="_blank" title="GitHub">
+            <Icon name="mdi:github" class="w-10 aspect-square opacity-50 hover:opacity-100 ease-in duration-200"/>
+            <span class="hidden">GitHub</span>
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/lucascarmac/" target="_blank">
-            LinkedIn
+          <a href="https://www.linkedin.com/in/lucascarmac/" target="_blank" title="LinkedIn">
+            <Icon name="mdi:linkedin" class="w-10 aspect-square opacity-50 hover:opacity-100 ease-in duration-200"/>
+            <span class="hidden">LinkedIn</span>
           </a>
         </li>
       </ul>
@@ -21,18 +24,41 @@ import Layout from '../layouts/Layout.astro';
   </header>
   <main class="p-16">
     <section class="flex flex-col gap-8">
-    <img 
-      src="https://avatars.githubusercontent.com/u/73367620?v=4" 
-      alt="A picture of Lucas, a young man with glasses, a beard and a black t-shirt, smiling on a bright day outside" 
-      class="rounded-full aspect-square w-64"
-    />
-    <div class="flex flex-col gap-2">
-    <h1 class="text-5xl font-bold">Lucas Machado</h1>
-    <h2 class="text-xl font-semibold text-gray-200">Junior Front End Engineer at Onyma Digital</h2>
-    <p class="text-lg text-gray-400">I build accessible, responsive UIs for the web.</p>
-    </div>
+      <img 
+        src="https://avatars.githubusercontent.com/u/73367620?v=4" 
+        alt="A picture of Lucas, a young man with glasses, a beard and a black t-shirt, smiling on a bright day outside" 
+        class="rounded-full aspect-square w-64"
+      />
+      <div class="flex flex-col gap-2">
+        <h1 class="text-5xl font-bold">Lucas Machado</h1>
+        <p class="text-xl font-semibold text-gray-200">Junior Front End Engineer at Onyma Digital</p>
+        <p class="text-lg text-gray-400">I build accessible, responsive UIs for the web.</p>
+      </div>
     </section>
   </main>
+  <footer class="px16 py-8 flex flex-col items-center gap-8">
+    <p class="text-center">
+      Made with <Icon name="mdi:heart" class="text-white-500 w-4 inline-block hover:animate-pulse hover:text-red-500 ease-in duration-300" /> by yours truly. 
+      <br>
+      Built with free and open-source software.
+    </p>
+    <section class="w-fit grayscale hover:grayscale-0 ease-in duration-200">
+      <ul class="flex justify-center items-center gap-8">
+        <li title="React">
+          <Icon class="w-8" name="logos:react"/>
+        </li>
+        <li title="Tailwind CSS">
+          <Icon class="w-8" name="logos:tailwindcss-icon"/>
+        </li>
+        <li title="Astro">
+          <Icon class="w-8" name="vscode-icons:file-type-astro"/>
+        </li>
+        <li title="Neovim">
+          <Icon class="w-24" name="logos:neovim"/>
+        </li>
+      </ul>
+    </section>
+  </footer>
 </Layout>
 
 <style>
