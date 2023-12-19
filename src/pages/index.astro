@@ -1,7 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Experience from "../components/Experience.astro";
+import SocialMedia from "../components/SocialMedia.astro";
 import { Icon } from "astro-icon";
+
+const socialMedia = [
+  {
+    label: "GitHub",
+    icon: "mdi:github",
+    url: "https://github.com/lucsmachado/",
+  },
+  {
+    label: "LinkedIn",
+    icon: "mdi:linkedin",
+    url: "https://www.linkedin.com/in/lucascarmac/",
+  },
+  {
+    label: "YouTube",
+    icon: "mdi:youtube",
+    url: "https://www.youtube.com/@lucasmachado6447/videos",
+  },
+];
 ---
 
 <Layout title="Lucas Machado">
@@ -35,46 +54,18 @@ import { Icon } from "astro-icon";
         </div>
       </section>
       <div class="pt-8">
-        <ul class="flex gap-8">
-          <li>
-            <a
-              href="https://github.com/lucsmachado/"
-              target="_blank"
-              title="GitHub"
-            >
-              <Icon
-                name="mdi:github"
-                class="w-10 aspect-square opacity-50 hover:opacity-100 ease-in duration-200"
-              />
-              <span class="hidden">GitHub</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/lucascarmac/"
-              target="_blank"
-              title="LinkedIn"
-            >
-              <Icon
-                name="mdi:linkedin"
-                class="w-10 aspect-square opacity-50 hover:opacity-100 ease-in duration-200"
-              />
-              <span class="hidden">LinkedIn</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/@lucasmachado6447/videos"
-              target="_blank"
-              title="YouTube"
-            >
-              <Icon
-                name="mdi:youtube"
-                class="w-10 aspect-square opacity-50 hover:opacity-100 ease-in duration-200"
-              />
-              <span class="hidden">YouTube</span>
-            </a>
-          </li>
+        <ul class="flex flex-wrap gap-8">
+          {
+            socialMedia.map((item) => (
+              <li>
+                <SocialMedia
+                  label={item.label}
+                  icon={item.icon}
+                  url={item.url}
+                />
+              </li>
+            ))
+          }
         </ul>
       </div>
     </header>
