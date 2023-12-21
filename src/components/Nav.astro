@@ -1,0 +1,38 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+
+const navLinks = [
+  {
+    label: "Home",
+    url: "/",
+  },
+  {
+    label: "Blog",
+    url: "/blog",
+  },
+];
+---
+
+<nav class="pt-8 w-max">
+  <ul>
+    {
+      navLinks.map((item) => (
+        <li class="py-3">
+          <a
+            href={item.url}
+            class={`${
+              pathname === item.url ? "active" : ""
+            } text-sm font-bold uppercase tracking-widest text-slate-500 hover:text-slate-200 focus-visible:text-slate-200 transition-all motion-reduce:transition-none`}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+<style>
+  .active {
+    @apply text-slate-200;
+  }
+</style>

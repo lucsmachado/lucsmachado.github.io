@@ -1,151 +1,55 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Experience from "../components/Experience.astro";
-import SocialMedia from "../components/SocialMedia.astro";
-import { Icon } from "astro-icon";
 
 const metadata = {
   title: "Lucas Machado",
   description:
     "Lucas Machado is a software engineer who builds accessible and interactive user experiences for the web.",
 };
-
-const socialMedia = [
-  {
-    label: "GitHub",
-    icon: "mdi:github",
-    url: "https://github.com/lucsmachado/",
-  },
-  {
-    label: "LinkedIn",
-    icon: "mdi:linkedin",
-    url: "https://www.linkedin.com/in/lucascarmac/",
-  },
-  {
-    label: "YouTube",
-    icon: "mdi:youtube",
-    url: "https://www.youtube.com/@lucasmachado6447/videos",
-  },
-];
 ---
 
 <Layout {...metadata}>
-  <div
-    class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0 lg:flex lg:justify-between lg:gap-4"
-  >
-    <header
-      class="lg:py-24 lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:flex lg:flex-col lg:justify-between"
-    >
-      <section class="flex flex-col gap-8">
-        <img
-          src="https://avatars.githubusercontent.com/u/73367620?v=4"
-          alt="A picture of Lucas, a young man with glasses, a beard and a black t-shirt, smiling on a bright day outside"
-          class="rounded-full aspect-square w-64"
-        />
-        <div class="flex flex-col gap-2">
-          <h1
-            class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-200"
-          >
-            Lucas Machado
-          </h1>
-          <h2
-            class="text-lg sm:text-xl font-medium tracking-tight text-slate-200"
-          >
-            Junior Developer
-          </h2>
-          <p class="max-w-sm leading-normal">
-            Computer Science major and full-time front-end developer. I love
-            building interactive and accessible user experiences for the web.
-          </p>
-        </div>
-      </section>
-      <div class="pt-8">
-        <ul class="flex flex-wrap gap-8">
-          {
-            socialMedia.map((item) => (
-              <li>
-                <SocialMedia
-                  label={item.label}
-                  icon={item.icon}
-                  url={item.url}
-                />
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-    </header>
-    <main
-      class="pt-24 lg:w-1/2 lg:py-24 lg:flex lg:flex-col lg:justify-between"
-    >
-      <ol class="flex flex-col gap-8">
-        <li>
-          <Experience
-            position="Junior Front-End Developer"
-            company={{ name: "Onyma", website: "https://www.onyma.digital/" }}
-            duration={{ start: "SEP 2023", end: "PRESENT" }}
-            description="Promoted to a full-time developer position. Currently working on delivering new features for the company's many web apps. Recent projects include an AI-powered chatbot."
-            skills={[
-              "React",
-              "JavaScript",
-              "TypeScript",
-              "Next",
-              "Redux",
-              "Jest",
-              "React Router",
-              "Vite",
-              "Scrum",
-              "Linux",
-            ]}
-          />
-        </li>
-        <li>
-          <Experience
-            position="Front-End Developer Intern"
-            company={{ name: "Onyma", website: "https://www.onyma.digital/" }}
-            duration={{ start: "MAR 2022", end: "AUG 2023" }}
-            description="Started developing, maintaining, and shipping production code for a health-tech startup. Acquired hands-on experience while working on multiple projects, ranging from landing pages to interactive dashboards."
-            skills={[
-              "HTML",
-              "CSS",
-              "JavaScript",
-              "TypeScript",
-              "React",
-              "Next",
-              "Context API",
-              "Styled Components",
-              "Git",
-              "GitHub",
-            ]}
-          />
-        </li>
-      </ol>
-      <footer class="pt-8 flex flex-col items-center gap-8">
-        <p class="text-center">
-          Made with <Icon
-            name="mdi:heart"
-            class="text-white-500 w-4 inline-block hover:animate-pulse hover:text-red-500 ease-in duration-300"
-          /> by yours truly.
-          <br />
-           Built with free and open-source software.
-        </p>
-        <section class="w-fit grayscale hover:grayscale-0 ease-in duration-200">
-          <ul class="flex justify-center items-center gap-8">
-            <li title="React">
-              <Icon class="w-8" name="logos:react" />
-            </li>
-            <li title="Tailwind CSS">
-              <Icon class="w-8" name="logos:tailwindcss-icon" />
-            </li>
-            <li title="Astro">
-              <Icon class="w-8" name="vscode-icons:file-type-astro" />
-            </li>
-            <li title="Neovim">
-              <Icon class="w-24" name="logos:neovim" />
-            </li>
-          </ul>
-        </section>
-      </footer>
-    </main>
-  </div>
+  <ol class="flex flex-col gap-8">
+    <li>
+      <Experience
+        position="Junior Front-End Developer"
+        company={{ name: "Onyma", website: "https://www.onyma.digital/" }}
+        duration={{ start: "SEP 2023", end: "PRESENT" }}
+        description="Promoted to a full-time developer position. Currently working on delivering new features for the company's many web apps. Recent projects include an AI-powered chatbot."
+        skills={[
+          "React",
+          "JavaScript",
+          "TypeScript",
+          "Next",
+          "Redux",
+          "Jest",
+          "React Router",
+          "Vite",
+          "Scrum",
+          "Linux",
+        ]}
+      />
+    </li>
+    <li>
+      <Experience
+        position="Front-End Developer Intern"
+        company={{ name: "Onyma", website: "https://www.onyma.digital/" }}
+        duration={{ start: "MAR 2022", end: "AUG 2023" }}
+        description="Started developing, maintaining, and shipping production code for a health-tech startup. Acquired hands-on experience while working on multiple projects, ranging from landing pages to interactive dashboards."
+        skills={[
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Next",
+          "Context API",
+          "Styled Components",
+          "Git",
+          "GitHub",
+        ]}
+      />
+    </li>
+  </ol>
 </Layout>

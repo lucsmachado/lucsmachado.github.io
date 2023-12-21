@@ -1,0 +1,30 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<footer class="pt-8 flex flex-col items-center gap-8">
+  <p class="text-center">
+    Made with <Icon
+      name="mdi:heart"
+      class="text-white-500 w-4 inline-block hover:animate-pulse hover:text-red-500 ease-in duration-300"
+    /> by yours truly.
+    <br />
+     Built with free and open-source software.
+  </p>
+  <section class="w-fit grayscale hover:grayscale-0 ease-in duration-200">
+    <ul class="flex justify-center items-center gap-8">
+      <li title="React">
+        <Icon class="w-8" name="logos:react" />
+      </li>
+      <li title="Tailwind CSS">
+        <Icon class="w-8" name="logos:tailwindcss-icon" />
+      </li>
+      <li title="Astro">
+        <Icon class="w-8" name="vscode-icons:file-type-astro" />
+      </li>
+      <li title="Neovim">
+        <Icon class="w-24" name="logos:neovim" />
+      </li>
+    </ul>
+  </section>
+</footer>
