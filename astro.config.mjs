@@ -7,4 +7,10 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://lucsmachado.github.io",
   integrations: [react(), tailwind()],
+  markdown: {
+    shikiConfig: {
+      theme: "material-theme-palenight",
+      wrap: true,
+    },
+  },
 });
