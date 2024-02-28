@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon";
+import DateTime from "./DateTime.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  post: CollectionEntry<"posts">;
+}
+
+const { post } = Astro.props;
+---
+
+<li class="">
+  <a
+    href={`/posts/${post.slug}`}
+    class="relative block overflow-hidden rounded-lg border border-gray-600 p-4 sm:p-6 lg:p-8 bg-slate-800 hover:border-teal-300 transition-colors duration-300"
+  >
+    <span
+      class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-teal-300 via-blue-500 to-purple-600"
+    ></span>
+    <h3 class="text-lg text-teal-300 pb-1">{post.data.title}</h3>
+    <div class="flex gap-2">
+      <Icon class="w-4" name="lucide:calendar" />
+      <DateTime pubDate={post.data.pubDate} />
+    </div>
+    <p class="pt-4">{post.data.description}</p>
+  </a>
+</li>

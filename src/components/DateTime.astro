@@ -1,0 +1,40 @@
+---
+interface Props {
+  pubDate: Date;
+}
+
+const { pubDate } = Astro.props;
+
+const formatDate = (date: Date): string => {
+  const nth = (day: number): string => {
+    if (day > 3 && day < 21) return "th";
+    switch (day % 10) {
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
+    }
+  };
+
+  const parts = new Intl.DateTimeFormat("en-US", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).formatToParts(date);
+
+  return parts
+    .map((part) => {
+      if (part.type === "day") {
+        return `${part.value}${nth(parseInt(part.value))}`;
+      }
+      return part.value;
+    })
+    .join("");
+};
+---
+
+<p>{formatDate(pubDate)}</p>

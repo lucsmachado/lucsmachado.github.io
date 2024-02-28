@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+import BlogPost from "../components/BlogPost.astro";
 
 const metadata = {
   title: "The Lucas Machado Blog",
@@ -23,13 +24,7 @@ const postCollection = await getCollection("posts");
         Posts
       </h2>
       <ul>
-        {
-          postCollection.map((post) => (
-            <li>
-              <a href={`/posts/${post.slug}`}>{post.data.title}</a>
-            </li>
-          ))
-        }
+        {postCollection.map((post) => <BlogPost post={post} />)}
       </ul>
     </div>
   </div>
