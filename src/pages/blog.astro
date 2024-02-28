@@ -6,6 +6,10 @@ import BlogPost from "../components/BlogPost.astro";
 const metadata = {
   title: "The Lucas Machado Blog",
   description: "Lucas Machado's personal blog.",
+  image: {
+    url: "https://avatars.githubusercontent.com/u/73367620?v=4",
+    alt: "A picture of Lucas, a young man with glasses, a beard and a black t-shirt, smiling on a bright day outside",
+  },
 };
 
 const postCollection = await getCollection("posts");
