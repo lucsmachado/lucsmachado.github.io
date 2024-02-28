@@ -1,7 +1,6 @@
 ---
-layout: "../../layouts/BlogLayout.astro"
 title: "Why Astro?"
-pubDate: "2023/12/21"
+pubDate: 2023-12-21
 description: "My first blog post, which explains my reasoning for choosing Astro to build my personal website"
 author: "Lucas Machado"
 tags: ["astro", "blogging", "learning in public"]
