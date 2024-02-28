@@ -3,6 +3,9 @@ title: "Why Astro?"
 pubDate: 2023-12-21
 description: "My first blog post, which explains my reasoning for choosing Astro to build my personal website"
 author: "Lucas Machado"
+image:
+    url: "https://docs.astro.build/assets/full-logo-light.png"
+    alt: "The full Astro logo."
 tags: ["astro", "blogging", "learning in public"]
 ---
 

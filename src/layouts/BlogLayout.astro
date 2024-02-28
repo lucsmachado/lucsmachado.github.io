@@ -5,7 +5,11 @@ import DateTime from "../components/DateTime.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={frontmatter.title} description={frontmatter.description}>
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  image={frontmatter.image}
+>
   <article
     class="prose lg:prose-xl prose-slate dark:prose-invert hover:prose-headings:underline prose-headings:text-teal-300"
   >
@@ -13,6 +17,7 @@ const { frontmatter } = Astro.props;
       {frontmatter.title}
     </h1>
     <DateTime pubDate={frontmatter.pubDate} />
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
     <slot />
     <p class="pt-8 font-medium text-slate-200">
       Written by {frontmatter.author}
