@@ -9,7 +9,7 @@ interface Props {
     start: string;
     end: string;
   };
-  description: string;
+  description?: string;
   skills: string[];
 }
 
@@ -35,7 +35,7 @@ const { position, company, duration, description, skills } = Astro.props;
       </h3>
     </a>
     <div class="pt-4">
-      <p class="text-sm leading-normal">{description}</p>
+      {description && <p class="text-sm leading-normal">{description}</p>}
       <ul class="pt-4 flex flex-wrap">
         {
           skills.map((skill) => (
