@@ -9,11 +9,10 @@ interface Props {
     start: string;
     end: string;
   };
-  description?: string;
   skills: string[];
 }
 
-const { position, company, duration, description, skills } = Astro.props;
+const { position, company, duration, skills } = Astro.props;
 ---
 
 <div class="flex sm:gap-8 md:gap-4">
@@ -35,7 +34,7 @@ const { position, company, duration, description, skills } = Astro.props;
       </h3>
     </a>
     <div class="pt-4">
-      {description && <p class="text-sm leading-normal">{description}</p>}
+      <p class="text-sm leading-normal"><slot /></p>
       <ul class="pt-4 flex flex-wrap">
         {
           skills.map((skill) => (
