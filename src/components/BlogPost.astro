@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import DateTime from "./DateTime.astro";
 import type { CollectionEntry } from "astro:content";
 
@@ -20,7 +20,7 @@ const { post } = Astro.props;
     ></span>
     <h3 class="text-lg text-teal-300 pb-1">{post.data.title}</h3>
     <div class="flex gap-2">
-      <Icon class="w-4" name="lucide:calendar" />
+      <Icon class="w-4 h-auto" name="lucide:calendar" />
       <DateTime pubDate={post.data.pubDate} />
     </div>
     <p class="pt-4">{post.data.description}</p>
