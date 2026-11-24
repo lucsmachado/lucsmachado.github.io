@@ -10,15 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^4.4.2",
-    "@astrojs/tailwind": "^5.1.5",
+    "@astrojs/react": "^7.1.9",
     "@types/react": "^18.3.32",
     "@types/react-dom": "^18.3.7",
-    "astro": "^5.18.2",
+    "astro": "^7.4.13",
     "astro-icon": "^1.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.19"
+    "tailwindcss": "^4.3.5"
   },
   "devDependencies": {
     "@iconify-json/logos": "^1.2.21",
@@ -26,6 +25,7 @@
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/vscode-icons": "^1.2.100",
     "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.5",
     "prettier": "^3.10.1",
     "prettier-plugin-astro": "^0.12.3"
   },

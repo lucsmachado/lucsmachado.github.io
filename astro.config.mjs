@@ -1,13 +1,15 @@
 import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
 import icon from "astro-icon";
-
-import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://lucsmachado.github.io",
-  integrations: [icon(), react(), tailwind()],
+  integrations: [icon(), react()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   markdown: {
     shikiConfig: {
       theme: "material-theme-palenight",
